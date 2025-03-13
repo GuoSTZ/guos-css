@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f1f1f1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 1rem;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #ddd;
+}
+
+.sidebar nav ul li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+/* 保持原有样式不变，只需确保内容区域的样式正确 */
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+/* 其他样式保持不变 */
+.content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.content-item {
+  flex: 0 0 calc(50% - 0.5rem);
+  /* background-color: #f9f9f9; */
+  background-color: #333;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.content-item-title {
+  color: #fff;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    max-height: 200px;
+  }
+  
+  .content-item {
+    flex: 0 0 100%;
+  }
+}

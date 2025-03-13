@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>一个网页</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="content-container">
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="#home" data-section="home" class="menu-item">首页</a></li>
+          <li><a href="#button" data-section="button" class="menu-item">按钮</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="content-main">
+      <!-- 内容将通过JavaScript动态加载 -->
+      <div id="content-container"></div>
+    </main>
+  </div>
+
+  <footer>
+    <p>版权所有 &copy; 2025 Guos</p>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
