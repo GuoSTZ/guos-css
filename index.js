@@ -88,7 +88,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const componentMap = {
       'button': [
         './modules/button/hover/1.js',
-        './modules/button/click/1.js',
+        './modules/button/click/1.js'
+      ],
+      'clock': [
+        './modules/clock/1.js',
+        './modules/clock/2.js',
       ]
       // 可以添加更多页面和组件的映射
     };
