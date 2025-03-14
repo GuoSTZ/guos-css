@@ -74,10 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .then(html => {
         contentContainer.innerHTML = html;
-        const section = contentContainer.querySelector('.content-section');
-        if (section) {
-          section.classList.add('active');
-        }
         loadComponentsForSection(sectionId);
       })
       .catch(error => {
